@@ -1,0 +1,52 @@
+{
+  "id": "bilibili-tv",
+  "name": "Bilibili TV",
+  "version": "0.2.0",
+  "apiVersion": 4,
+  "entry": "plugin.js",
+  "description": "Anime y series de Bilibili TV (bilibili.tv) con subtítulos cuando existen. Plugin comunitario no oficial: solo abre lo gratuito; el contenido VIP o bloqueado por región no se abre.",
+  "hosts": [
+    "api.bilibili.tv",
+    "bilibili.tv",
+    "*.bilibili.tv",
+    "api.biliintl.com",
+    "biliintl.com",
+    "*.biliintl.com",
+    "bstarstatic.com",
+    "*.bstarstatic.com",
+    "bilivideo.com",
+    "*.bilivideo.com"
+  ],
+  "streamHosts": "any",
+  "capabilities": ["search", "home", "episodes", "resolve"],
+  "categories": ["anime", "series"],
+  "color": "#23ADE5",
+  "settings": [
+    {
+      "key": "locale",
+      "label": "Idioma de títulos",
+      "type": "select",
+      "default": "en_US",
+      "hint": "Bilibili TV no ofrece español",
+      "options": [
+        { "value": "en_US", "label": "English" },
+        { "value": "id_ID", "label": "Bahasa Indonesia" },
+        { "value": "ms_MY", "label": "Bahasa Melayu" },
+        { "value": "vi_VN", "label": "Tiếng Việt" },
+        { "value": "th_TH", "label": "ไทย" }
+      ]
+    },
+    {
+      "key": "max_quality",
+      "label": "Calidad máxima",
+      "type": "select",
+      "default": "1080",
+      "hint": "Baja la calidad si tu internet es lento",
+      "options": [
+        { "value": "1080", "label": "Hasta 1080p" },
+        { "value": "720", "label": "Hasta 720p" },
+        { "value": "480", "label": "Hasta 480p" }
+      ]
+    }
+  ]
+}
